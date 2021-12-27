@@ -20,6 +20,13 @@ fi
 
 GREEN="\[$(tput setaf 2)\]"
 CYAN="\[$(tput setaf 6)\]"
+RED="\[$(tput setaf 1)\]"
+BLUE="\[$(tput setaf 4)\]"
 RESET="\[$(tput sgr0)\]"
 
-PS1="${GREEN} \$? ${CYAN}$PWD ${RESET}> "
+rightprompt() {
+    RP="$(cat /etc/hostname)"
+    printf "%*s" $COLUMNS "${RED} ${RP} ${RESET}"
+}
+
+PS1="\[$(tput sc; rightprompt; tput rc)\]${GREEN}\$? ${CYAN}\$(pwd) ${RESET}> "
