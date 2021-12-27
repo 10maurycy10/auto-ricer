@@ -1,0 +1,7 @@
+.local/bin/
+.local/bin/
+.local/share/
+.config/sway/
+.config/i3
+.config/i3status
+.config/fontconfig

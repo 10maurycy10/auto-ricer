@@ -1,0 +1,25 @@
+alias qrcode="qrencode -t UTF8 -o /dev/tty "
+
+export EDITOR=nano
+export PAGER=less
+
+export MOZ_ENABLE_WAYLAND=1
+
+fortune | cowsay
+
+alias fuckit="sudo shutdown -H now"
+
+alias ls="ls --color=auto"
+
+alias xkcd="open https://xkcd.com/ 2> /dev/null > /dev/null&"
+
+if [ -n "$DESKTOP_SESSION" ];then
+    eval $(gnome-keyring-daemon --start)
+    export SSH_AUTH_SOCK
+fi
+
+GREEN="\[$(tput setaf 2)\]"
+CYAN="\[$(tput setaf 6)\]"
+RESET="\[$(tput sgr0)\]"
+
+PS1="${GREEN} \$? ${CYAN}$PWD ${RESET}> "

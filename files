@@ -1,0 +1,9 @@
+.local/bin/emoji emoji.sh
+.local/bin/xemoji xemoji.sh
+.local/share/emojilist emojilist.txt
+.config/sway swayconfig
+.config/i3/config i3config
+.config/i3status/config i3statusconfig
+.bash_profile bashprofile
+.bashrc bashrc
+.config/fontconfig/fonts.conf fontconfig
