@@ -26,7 +26,8 @@ RESET="\[$(tput sgr0)\]"
 
 rightprompt() {
     RP="$(cat /etc/hostname)"
-    printf "%*s" $COLUMNS "${RED} ${RP} ${RESET}"
+    let COL=$(tput cols)-${#MRP}+${#RED}+${#RESET}
+    printf "%*s" $COL "${RED}${RP}${RESET}"
 }
 
 PS1="\[$(tput sc; rightprompt; tput rc)\]${GREEN}\$? ${CYAN}\$(pwd) ${RESET}> "
