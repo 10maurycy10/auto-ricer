@@ -1,0 +1,9 @@
+export EDITOR=nano
+export PAGER=less
+export MOZ_ENABLE_WAYLAND=1
+export TERMINAL=alacritty
+export PATH="$HOME/.local/bin/:$HOME/.local/usr/local/bin/:/usr/local/bin:/bin:/usr/bin"
+
+. ~/.local/bin/aliases.sh
+
+fortune | cowsay

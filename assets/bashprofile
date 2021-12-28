@@ -1,17 +1,5 @@
-alias qrcode="qrencode -t UTF8 -o /dev/tty "
-
-export EDITOR=nano
-export PAGER=less
-
-export MOZ_ENABLE_WAYLAND=1
-
-fortune | cowsay
-
-alias fuckit="sudo shutdown -H now"
-
-alias ls="ls --color=auto"
-
-alias xkcd="open https://xkcd.com/ 2> /dev/null > /dev/null&"
+. ~/.local/bin/aliases.sh
+. ~/.profile
 
 if [ -n "$DESKTOP_SESSION" ];then
     eval $(gnome-keyring-daemon --start)
@@ -31,3 +19,5 @@ rightprompt() {
 }
 
 PS1="\[$(tput sc; rightprompt; tput rc)\]${GREEN}\$? ${CYAN}\$(pwd) ${RESET}> "
+
+[ `tty` == "/dev/tty1" ] && sway

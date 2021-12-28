@@ -7,3 +7,5 @@
 .bash_profile bashprofile
 .bashrc bashrc
 .config/fontconfig/fonts.conf fontconfig
+.local/bin/aliases.sh aliases
+.profile profile

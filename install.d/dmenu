@@ -1,0 +1,11 @@
+#!/bin/sh
+
+mkdir buildtmp
+pushd buildtmp
+curl https://dl.suckless.org/tools/dmenu-5.0.tar.gz | tar -xz
+cd dmenu-5.0
+cp ../../assets/dmenuconfig.h config.h
+make
+PREFIX="" DESTDIR="$HOME/.local" make install
+popd
+rm buildtmp -r

@@ -1,0 +1,7 @@
+alias sp="sudo pacman"
+alias shn="shudown -H now"
+alias ls="ls --color=auto"
+alias grep="grep --color=auto"
+alias starwars="telnet towel.blinkenlights.nl"
+alias qrcode="qrencode -t UTF8 -o /dev/tty "
+alias xkcd="open https://xkcd.com/ 2> /dev/null > /dev/null&"
