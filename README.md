@@ -6,14 +6,20 @@ Add a user, su.:
 
 ```
 # do this as root.
-pacman -S git
+pacman -S git curl
 useradd demo
 su demo
 ```
 
 Connect to a network.
 
-Download and run the script. It will prompt for your root password.
+Run
+
+```
+curl https://raw.githubusercontent.com/10maurycy10/auto-ricer/main/bootstrap.sh | bash
+```
+
+OR: Download and run the script. It will prompt for your root password.
 
 ```
 git clone https://github.com/10maurycy10/auto-ricer
