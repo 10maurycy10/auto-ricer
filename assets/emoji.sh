@@ -4,7 +4,7 @@
 # feed into dmenu
 # remove emoji description
 # save as $emoji
-emoji=$(cat ~/.local/share/emojilist | cut -d ';' | dmenu -l 30 -i | sed "s/ .*//")
+emoji=$(cat ~/.local/share/emojilist | cut -d ';' -f 1 | dmenu -l 30 -i | sed "s/ .*//")
 
 # Exit if no selection
 [ -z "$emoji" ] && exit
