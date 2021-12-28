@@ -13,11 +13,12 @@ BLUE="\[$(tput setaf 4)\]"
 RESET="\[$(tput sgr0)\]"
 
 rightprompt() {
-    RP="$(cat /etc/hostname)"
-    let COL=$(tput cols)-${#MRP}+${#RED}+${#RESET}
-    printf "%*s" $COL "${RED}${RP}${RESET}"
+#    RP="$(cat /etc/hostname)"
+#    let COL=$(tput cols)-${#MRP}+${#RED}+${#RESET}
+#    printf "%*s" $COL "${RED}${RP}${RESET}"
+     echo -n ""
 }
 
 PS1="\[$(tput sc; rightprompt; tput rc)\]${GREEN}\$? ${CYAN}\$(pwd) ${RESET}> "
 
-[ `tty` == "/dev/tty1" ] && sway
+[ -z $DISPLAY ] && [ `tty` == "/dev/tty1" ] && sway

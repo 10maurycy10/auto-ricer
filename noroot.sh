@@ -10,11 +10,6 @@ function failed {
 	fi
 }
 
-echo -n 'pkg: reading pkg list '
-PKGLIST=$(cat archpkglist)
-echo '[DONE]'
-echo 'pkg: installing packages, enter root password:'
-su -c "pacman -S $PKGLIST" || failed "failed to su"
 
 echo -n 'dir: reading dir list '
 DIRLIST=$(cat dirs)

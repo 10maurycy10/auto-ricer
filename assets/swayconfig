@@ -1,5 +1,13 @@
 set $mod Mod4
 
+# class                  border  backgr. text    indicator child_border
+client.focused           #66BBFF #2266FF #111111 #66BBFF   #001155
+client.focused_inactive  #111111 #001155 #66BBFF #66BBDD   #001155
+client.unfocused         #111111 #111111 #66BBFF #111111   #001155
+client.placeholder       #111111 #111111 #66BBFF #111111   #001155
+client.urgent            #66BBFF #ffffff #66BBFF #66BBDD   #001155
+client.background        #111111
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:monospace 8
@@ -152,6 +160,17 @@ bindsym $mod+r mode "resize"
 bar {
 	position top
         status_command i3status
+        colors {
+            background #111111
+            statusline #66BBFF
+            separator  #111111
+
+            focused_workspace  #66BBFF #111111 #66BBFF
+            active_workspace   #111111 #111111 #66BBFF
+            inactive_workspace #111111 #111111 #2266FF
+            urgent_workspace   #111111 #66BBFF #111111
+            binding_mode       #111111 #66BBFF #111111
+	}
 }
 
 exec --nostartup-id "/usr/bin/lxqt-policykit-agent"
@@ -161,4 +180,4 @@ bindsym $mod+BackSpace exec "swaylock -efc 000000"
 
 bindsym $mod+Sys_Req exec "cd ~; grim"
 
-output * adaptive_sync on
+output * bg #111111 solid_color adaptive_sync on
