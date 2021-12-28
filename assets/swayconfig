@@ -177,7 +177,12 @@ exec --nostartup-id "/usr/bin/lxqt-policykit-agent"
 
 # lock screen
 bindsym $mod+BackSpace exec "swaylock -efc 000000"
+bindsym $mod+i exec "emoji"
 
-bindsym $mod+Sys_Req exec "cd ~; grim"
+bindsym Print exec "grim"
 
 output * bg #111111 solid_color adaptive_sync on
+
+exec wl-paste -t text --watch clipman store --no-persist
+
+bindsym $mod+q exec "alacritty -e swayhelp"

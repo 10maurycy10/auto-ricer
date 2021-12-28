@@ -2,7 +2,15 @@ export EDITOR=nano
 export PAGER=less
 export MOZ_ENABLE_WAYLAND=1
 export TERMINAL=alacritty
-export PATH="$HOME/.local/bin/:$HOME/.local/usr/local/bin/:/usr/local/bin:/bin:/usr/bin"
+export PATH="$HOME/.local/bin/:$HOME/.local/usr/local/bin/:/usr/local/bin:/bin:/usr/bin:$HOME/go/bin"
+
+# disable ^S ^Q
+stty -ixon
+
+# allow huge history
+export HISTFILESIZE=
+export HISTSIZE=
+export HISTTIMEFORMAT="[%F %T] "
 
 . ~/.local/bin/aliases.sh
 

@@ -10,3 +10,7 @@
 .config/fontconfig/fonts.conf fontconfig
 .local/bin/aliases.sh aliases
 .profile profile
+.local/share/swaydoc swaykeymap.txt
+.local/share/i3doc i3keymap.txt
+.local/bin/swayhelp swayhelp
+.local/bin/i3help i3help

@@ -10,4 +10,4 @@ emoji=$(cat ~/.local/share/emojilist | cut -d ';' -f 1 | dmenu -l 30 -i | sed "s
 [ -z "$emoji" ] && exit
 
 # Copy to clipboard (X11 specific!!)
-printf "$chosen" | xclip
+printf "$emoji" | xclip

@@ -10,4 +10,4 @@ emoji=$(cat ~/.local/share/emojilist | cut -d ';' -f 1 | dmenu -l 30 -i | sed "s
 [ -z "$emoji" ] && exit
 
 # Copy to clipboard (Wayland specific!!)
-printf "$chosen" | wl-copy
+echo -n "$emoji" | wl-copy

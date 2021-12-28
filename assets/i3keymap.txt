@@ -1,0 +1,67 @@
+## alternate key names
+
+mod4 aka "super" aka "Windows" aka "command"
+
+sysrq aka "printScr"
+
+AudioMute aka F1
+
+LowerVolume aka F2
+
+RaseVolume  aka F3
+
+## key binds
+
+mod4-q : show this help
+
+mod4-AudioMute : mute / unmute
+
+mod4-LowerVolume : lower volume by 5%
+
+mod4-RaseVolume : rase volume by 5%
+
+mod4-d : dmenu based launcher
+
+mod4-Shift-q : close focused window
+
+mod4-[j,k,l,;] : move focus
+
+mod4-[Up,Down,Left,Right] : move focus
+
+mod4-shift-[j,k,l,;] : move window
+
+mod4-shift-[Up,Down,Left,Right] : move window
+
+mod4-h : set split to vertical
+ 
+mod4-v : set split to horistal
+
+mod4-s : stack windows
+
+mod4-w : tab windows
+
+mod4-e : split (togles split direction)
+
+mod4-shift-space : float window
+
+mod4-space : move focus between tile and floating windows
+
+mod4-a : focus parent container
+
+mod4-[1,2,3,4,5,6,7,8,9,0] : move between workspaces
+
+mod4-shift-[1,2,3,4,5,6,7,8,9,0] : move window to workspace
+
+mod4-shift-c : reload config
+
+mod4-r : resize windows with vim/arrow keys. exit with Esc
+
+mod4-BackSpace: lock screen
+
+Sysrq : save screenshot
+
+Sysrq-shift : save rectangular screenshot
+
+mod4-i : launch emoji picker (suckless)
+
+mod4-Shift-e : exit WM

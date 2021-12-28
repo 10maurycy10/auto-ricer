@@ -49,4 +49,10 @@ install.d/$line || failed "buildscript $line failed"
 echo "$line: [DONE]"
 done <<< $FILELIST
 
+echo "----[ AUTO RICE COMPLETE ] ---"
+echo ""
+echo "log in on tty1 and press mod4/Windows/Command + Q to get keybind help"
+echo ""
+
 exit 0
+

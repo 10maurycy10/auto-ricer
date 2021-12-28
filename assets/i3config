@@ -60,8 +60,6 @@ bindsym $mod+d exec --no-startup-id dmenu_run
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
-bindsys $mod+Shift+r restart
-
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
@@ -208,9 +206,12 @@ exec --nostartup-id "/usr/bin/lxqt-policykit-agent"
 
 # lock screen
 bindsym $mod+BackSpace exec "i3lock -efc 000000"
+bindsym $mod+i exec "xemoji"
 
 bindsym Print exec spectacle -bn -o ~/Pictures/Screenshots/$(date +%F-%H-%M-%S-%N).png
 
 bindsym Shift+Print exec spectacle -brn -o ~/Pictures/Screenshots/$(date +%F-%H-%M-%S-%N).png
 
 exec --no-startup-id xsetroot -solid "#111111"
+
+bindsym $mod+q exec "alacritty -e i3help"

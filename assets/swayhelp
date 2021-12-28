@@ -1,0 +1,2 @@
+#!/bin/sh
+cat ~/.local/share/swaydoc | less
