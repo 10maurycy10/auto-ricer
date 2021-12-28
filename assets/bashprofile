@@ -21,4 +21,4 @@ rightprompt() {
 
 PS1="\[$(tput sc; rightprompt; tput rc)\]${GREEN}\$? ${CYAN}\$(pwd) ${RESET}> "
 
-[ -z $DISPLAY ] && [ `tty` == "/dev/tty1" ] && sway
+[ -z $DISPLAY ] && [ `tty` == "/dev/tty1" ] && exec sway
