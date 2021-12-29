@@ -2,7 +2,7 @@
 
 mkdir buildtmp
 pushd buildtmp
-curl https://dl.suckless.org/tools/dmenu-5.0.tar.gz | tar -xz
+cat ../arc/dmenu-5.0.tar.gz | tar -xz
 cd dmenu-5.0
 cp ../../assets/suckless/dmenuconfig.h config.h
 make

@@ -1,0 +1,11 @@
+mkdir buildtmp
+pushd buildtmp
+cat ../arc/libxft.tar.gz | tar -xz
+cd libxft
+cat ../../arc/libxft-bgra.patch | patch -p1
+./autogen.sh  --sysconfdir="$HOME/.local/etc" --prefix="$HOME/.local" --mandir="$HOME/.local/share/man"
+./autogen.sh  --sysconfdir="$HOME/.local/etc" --prefix="$HOME/.local" --mandir="$HOME/.local/share/man"
+make
+make install
+popd
+rm -fr buildtmp

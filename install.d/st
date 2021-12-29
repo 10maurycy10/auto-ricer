@@ -1,0 +1,14 @@
+#!/bin/bash
+mkdir buildtmp
+pushd buildtmp
+cat ../arc/st-0.8.4.tar.gz | tar -xz
+cd st-0.8.4/
+cat ../../arc/st-scrollback-0.8.4.diff | patch
+cat ../../arc/st-universcroll-0.8.4.diff | patch
+cp ../../assets/suckless/stconfig.h config.h
+make
+DESTDIR="$HOME/.local" make install
+popd
+rm -r buildtmp
+
+

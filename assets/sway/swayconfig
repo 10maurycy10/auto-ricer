@@ -27,7 +27,7 @@ floating_modifier $mod
 set $menu dmenu_run
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec st
 
 # kill focused window
 bindsym $mod+Shift+q kill
