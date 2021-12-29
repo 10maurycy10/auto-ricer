@@ -1,0 +1,2 @@
+ patch < ../../arc/st-boxdraw_v2-0.8.2.diff
+ patch < ../../arc/st-universcroll-0.8.4.diff
