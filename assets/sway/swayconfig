@@ -185,4 +185,4 @@ output * bg #111111 solid_color adaptive_sync on
 
 exec wl-paste -t text --watch clipman store --no-persist
 
-bindsym $mod+q exec "alacritty -e swayhelp"
+bindsym $mod+q exec "st swayhelp"

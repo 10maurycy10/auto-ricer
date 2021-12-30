@@ -214,4 +214,4 @@ bindsym Shift+Print exec spectacle -brn -o ~/Pictures/Screenshots/$(date +%F-%H-
 
 exec --no-startup-id xsetroot -solid "#111111"
 
-bindsym $mod+q exec "alacritty -e i3help"
+bindsym $mod+q exec "st i3help"

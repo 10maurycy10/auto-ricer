@@ -4,6 +4,8 @@ mkdir buildtmp
 pushd buildtmp
 cat ../arc/dmenu-5.0.tar.gz | tar -xz
 cd dmenu-5.0
+# disable check for colored (emoji) fonts, b/c we have a patched libxft
+patch < ../../arc/dmenu-allow-color-font-5.0.diff
 cp ../../assets/suckless/dmenuconfig.h config.h
 make
 PREFIX="" DESTDIR="$HOME/.local" make install
