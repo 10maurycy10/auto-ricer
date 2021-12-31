@@ -1,0 +1,5 @@
+[[ -z $WAYLAND ]] && echo "No wayland support, using xorg by default"
+
+[[ -z $WAYLAND ]] && cp assets/shell/bashprofile-xorg ~/.bash_profile
+
+exit 0

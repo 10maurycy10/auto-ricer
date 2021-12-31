@@ -1,8 +1,10 @@
 #!/bin/bash
 
+export MAKEFLAGS="-j $(nproc)"
+
 function failed {
 	echo ""
-	read -p "$1, Do you want to exit? [Yy/Nn] "
+	read -p "$1, Do you want to exit? [Yy/Nn] "  < /dev/tty
 	echo ""
 	if [[ $REPLY =~ ^[Yy]$ ]]
 	then
@@ -10,8 +12,24 @@ function failed {
 	fi
 }
 
+export XORG="yes"
+
+read -p "Do you want xorg support? If unsure, say yes. [Yy/Nn]: "
+
+[[ $REPLY =~ ^[Nn] ]] && export XORG=""
+
+export WAYLAND="yes"
+
+read -p "Do you want wayland support? If unsure, say yes. [Yy/Nn]: "
+
+[[ $REPLY =~ ^[Nn] ]] && export WAYLAND=""
+
 echo -n 'pkg: reading pkg list '
 PKGLIST=$(cat archpkglist)
+[[ ! -z $WAYLAND ]] && PKGLIST="$(cat archpkglist-wayland)$PKGLIST"
+[[ ! -z $XORG ]] && PKGLIST="$(cat archpkglist-xorg)$PKGLIST"
+
+
 echo '[DONE]'
 echo 'pkg: installing packages, enter root password:'
 su -c "pacman -S $PKGLIST" || failed "failed to su"
@@ -45,7 +63,7 @@ echo '[DONE]'
 
 while IFS= read -r line; do
 echo "build: running $line "
-install.d/$line || failed "buildscript $line failed"
+install.d/$line < /dev/tty || failed "buildscript $line failed" 
 echo "$line: [DONE]"
 done <<< $FILELIST
 

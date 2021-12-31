@@ -1,8 +1,10 @@
 #!/bin/bash
 
+export MAKEFLAGS="-j $(nproc)"
+
 function failed {
 	echo ""
-	read -p "$1, Do you want to exit? [Yy/Nn] "
+	read -p "$1, Do you want to exit? [Yy/Nn] "  < /dev/tty
 	echo ""
 	if [[ $REPLY =~ ^[Yy]$ ]]
 	then
@@ -10,6 +12,8 @@ function failed {
 	fi
 }
 
+export XORG="yes"
+export WAYLAND="yes"
 
 echo -n 'dir: reading dir list '
 DIRLIST=$(cat dirs)
@@ -40,8 +44,14 @@ echo '[DONE]'
 
 while IFS= read -r line; do
 echo "build: running $line "
-install.d/$line || failed "buildscript $line failed"
+install.d/$line < /dev/tty || failed "buildscript $line failed" 
 echo "$line: [DONE]"
 done <<< $FILELIST
 
+echo "----[ AUTO RICE COMPLETE ] ---"
+echo ""
+echo "log in on tty1 and press mod4/Windows/Command + Q to get keybind help"
+echo ""
+
 exit 0
+

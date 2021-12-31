@@ -1,10 +1,25 @@
 #!/bin/bash
+
+export LIGATURES="yes"
+
+read -p "Do you want ligature support? [Yy/Nn]: "
+
+[[ $REPLY =~ ^[Nn] ]] && export LIGATURES=""
+
+echo "'$LIGATURES'"
+
 mkdir buildtmp
 pushd buildtmp
 cat ../arc/st-0.8.4.tar.gz | tar -xz
 cd st-0.8.4/
-cat ../../arc/st-scrollback-0.8.4.diff | patch
-cp ../../assets/suckless/stconfig.h config.h
+patch < ../../arc/st-scrollback-0.8.4.diff
+
+[[ ! -z $LIGATURES ]] && patch < ../../arc/st-ligatures-scrollback-20210824-0.8.4.diff
+
+[[ ! -z $LIGATURES ]] && cp ../../assets/suckless/stconfig_lig.h config.h
+
+[[ -z $LIGATURES ]] && cp ../../assets/suckless/stconfig.h config.h
+
 make
 DESTDIR="$HOME/.local" make install
 popd

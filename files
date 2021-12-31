@@ -7,6 +7,7 @@
 .config/i3status/config i3/i3statusconfig
 .bash_profile shell/bashprofile
 .bashrc shell/bashrc
+.xinitrc xinitrc
 .config/fontconfig/fonts.conf fontconfig
 .local/bin/aliases.sh shell/aliases
 .profile shell/profile
