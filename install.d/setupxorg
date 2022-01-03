@@ -1,5 +1,43 @@
-[[ -z $WAYLAND ]] && echo "No wayland support, using xorg by default"
+if [[ -z $WAYLAND ]]
+# dont have wayland
+then
+	if [[ -z $XORG ]]
+	then
+		# dont have wayland and xorg
 
-[[ -z $WAYLAND ]] && cp assets/shell/bashprofile-xorg ~/.bash_profile
+		echo "WARNING: No graphics support selected!! [enter=ACK]"
+		read
+
+	else 
+		# have xorg but no wayland
+
+		echo seting xorg as default
+		cat assets/scripts/profilepostfix-x >> ~/.profile
+
+	fi
+
+else
+	# have wayland
+
+	if [[ -z $XORG ]]
+	then
+
+		# have wayland w/out xorg
+
+		echo setting wayland as default
+		cat assets/scripts/profilepostfix-wayland >> ~/.profile
+
+	else
+
+		echo Have wayland and xorg!
+		read -p "do you want Wayland as default [Yy/Nn]"
+		[[ $REPLY =~ ^[Nn]$ ]] || cat assets/scripts/profilepostfix-wayland >> ~/.profile
+		[[ $REPLY =~ ^[Nn]$ ]] || echo wayland set as default 
+		[[ $REPLY =~ ^[Nn]$ ]] && cat assets/scripts/profilepostfix-x >> ~/.profile
+		[[ $REPLY =~ ^[Nn]$ ]] && echo xorg set as default
+
+	fi
+
+fi
 
 exit 0

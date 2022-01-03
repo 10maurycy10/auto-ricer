@@ -20,7 +20,7 @@ read -p "Do you want xorg support? If unsure, say yes. [Yy/Nn]: "
 
 export WAYLAND="yes"
 
-read -p "Do you want wayland support? If unsure, say yes. [Yy/Nn]: "
+read -p "Do you want wayland support? If unsure, say yes. If you answer no, xorg will be default. [Yy/Nn]: "
 
 [[ $REPLY =~ ^[Nn] ]] && export WAYLAND=""
 

@@ -1,0 +1,19 @@
+. ~/.local/bin/aliases.sh
+
+autoload -U colors && colors
+
+zstyle ':completion:*' menu select
+
+HISTFILE=~/.zsh_history
+
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+
+GREEN="%{$fg[green]%}"
+CYAN="%{$fg[cyan]%}"
+RED="%{$fg[red]%}"
+BLUE="%{$fg[blue]%}"
+RESET="%{$reset_color%}"
+
+PS1="${RED}%? ${RESET}%B[%b ${GREEN}%n@%M ${RESET}%B] %~ %(!.#.>)%b "
+
+[ -z $DISPLAY ] && [ "$(tty)" == "/dev/tty1" ] && exec sway
