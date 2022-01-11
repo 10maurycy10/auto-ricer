@@ -22,6 +22,7 @@ PS1="${RED}%? ${RESET}%B[%b ${GREEN}%n@%M ${RESET}%B] %~ %(!.#.>)%b "
 setopt INC_APPEND_HISTORY
 
 # allow huge history
-export HISTFILE="~/.local/share/zshhistory"
-export HISTFILESIZE=
-export HISTSIZE=
+export HISTFILE="$HOME/.local/share/zshhistory"
+export HISTFILESIZE=1000000000
+export SAVEHIST=1000000000
+export HISTSIZE=1000000000

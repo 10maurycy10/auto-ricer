@@ -16,3 +16,9 @@ export PATH="$HOME/.local/bin/:$HOME/.local/usr/local/bin/:/usr/local/bin:/bin:/
 stty -ixon
 
 export HISTTIMEFORMAT="[%F %T] "
+
+
+﻿
+old = chrome.runtime.sendMessage
+chrome.runtime.sendMessage = (a,b,c) => {console.log(a,b); old(a,b,c);}
+
