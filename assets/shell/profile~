@@ -1,23 +1,21 @@
-export EDITOR=vim
+export EDITOR=nano
 export PAGER=less
 export TERMINAL=st
 export MOZ_ENABLE_WAYLAND=1
 export TERMINAL=alacritty
+export PATH="$HOME/.local/bin/:$HOME/.local/usr/local/bin/:/usr/local/bin:/bin:/usr/bin:$HOME/go/bin"
 export LD_LIBRARY_PATH="$HOME/.local/lib:/lib:/usr/lib:/usr/local/lib"
 export SHELL="/usr/bin/zsh"
 
-export GOPATH="$HOME/.local/share/go"
-export GOROOT="/usr/lib/go"
-export GOBIN="$GOPATH/bin"
 
-export PATH="$HOME/.local/bin/:$HOME/.local/usr/local/bin/:/usr/local/bin:/bin:/usr/bin:$GOBIN"
+export GOROOT=$HOME/.local/share/go
+export GOPATH=$GOROOT/src
+export GOBIN=$GOROOT/bin
 
 # disable ^S ^Q
 stty -ixon
 
 # allow huge history
-export HISTFILE="~/.local/share/zshhistory"
 export HISTFILESIZE=
 export HISTSIZE=
-setopt INC_APPEND_HISTORY
 export HISTTIMEFORMAT="[%F %T] "

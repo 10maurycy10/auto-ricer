@@ -1,1 +1,4 @@
 . ~/.local/bin/aliases.sh
+
+# disable ^S ^Q
+stty -ixon

@@ -1,5 +1,8 @@
 . ~/.local/bin/aliases.sh
 
+# disable ^S ^Q
+stty -ixon
+
 autoload -U colors && colors
 
 zstyle ':completion:*' menu select
