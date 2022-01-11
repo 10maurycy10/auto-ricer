@@ -8,6 +8,7 @@
 .bash_profile shell/bashprofile
 .bashrc shell/bashrc
 .zshrc shell/zshrc
+.zprofile shell/zprofile
 .xinitrc xinitrc
 .config/fontconfig/fonts.conf fontconfig
 .local/bin/aliases.sh shell/aliases

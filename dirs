@@ -1,6 +1,7 @@
 .local/bin/
 .local/bin/
 .local/share/
+.local/share/go
 .config/sway/
 .config/i3
 .config/i3status
