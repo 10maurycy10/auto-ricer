@@ -19,4 +19,9 @@ RESET="%{$reset_color%}"
 
 PS1="${RED}%? ${RESET}%B[%b ${GREEN}%n@%M ${RESET}%B] %~ %(!.#.>)%b "
 
-[ -z $DISPLAY ] && [ "$(tty)" == "/dev/tty1" ] && exec sway
+setopt INC_APPEND_HISTORY
+
+# allow huge history
+export HISTFILE="~/.local/share/zshhistory"
+export HISTFILESIZE=
+export HISTSIZE=

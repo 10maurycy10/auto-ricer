@@ -2,7 +2,7 @@ export EDITOR=vim
 export PAGER=less
 export TERMINAL=st
 export MOZ_ENABLE_WAYLAND=1
-export TERMINAL=alacritty
+export TERMINAL=st
 export LD_LIBRARY_PATH="$HOME/.local/lib:/lib:/usr/lib:/usr/local/lib"
 export SHELL="/usr/bin/zsh"
 
@@ -15,9 +15,4 @@ export PATH="$HOME/.local/bin/:$HOME/.local/usr/local/bin/:/usr/local/bin:/bin:/
 # disable ^S ^Q
 stty -ixon
 
-# allow huge history
-export HISTFILE="~/.local/share/zshhistory"
-export HISTFILESIZE=
-export HISTSIZE=
-setopt INC_APPEND_HISTORY
 export HISTTIMEFORMAT="[%F %T] "
