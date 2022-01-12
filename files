@@ -1,7 +1,12 @@
-.local/bin/emoji scripts/emoji.sh
 .local/bin/xemoji scripts/xemoji.sh
+.local/bin/emoji scripts/emoji.sh
+.local/bin/dmount scripts/dmount.sh
+.local/bin/mounter scripts/mounter.sh
 .local/bin/prompt scripts/prompt.sh
+.local/bin/xplumb scripts/xplumb.sh
 .local/share/emojilist data/emojilist.txt
+.local/bin/plumb scripts/plumb.sh
+.local/bin/qrwait scripts/qrwait.sh
 .config/sway/config sway/swayconfig
 .config/i3/config i3/i3config
 .config/i3status/config i3/i3statusconfig
