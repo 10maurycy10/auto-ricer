@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if stat "$POINT"
-then sudo mount "$CHOSEN" "$POINY"
+then sudo mount "$CHOSEN" "$POINT"
 else
 MK=$(echo -e "yes\nno" | dmenu -p "Cant fine $POINT, do you want to create it?")
 [[ $MK == "yes" ]] && sudo mkdir "$POINT"

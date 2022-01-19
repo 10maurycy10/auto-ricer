@@ -65,3 +65,10 @@ Sysrq-shift : save rectangular screenshot
 mod4-i : launch emoji picker (suckless)
 
 mod4-Shift-e : exit WM
+
+mod4-p : open dialog to do things with selected text.
+
+mod4-m : mount removable drives dialog
+
+mod4-shift-m : unmount removable drives dialog
+

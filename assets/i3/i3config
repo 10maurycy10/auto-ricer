@@ -217,3 +217,9 @@ bindsym $mod+p exec xplumb
 exec --no-startup-id xsetroot -solid "#111111"
 
 bindsym $mod+q exec "st i3help"
+
+bindsym $mod+p exec "plumb"
+
+bindsym $mod+m exec "dmount"
+
+bindsym $mod+Shift+m exec "dumount"

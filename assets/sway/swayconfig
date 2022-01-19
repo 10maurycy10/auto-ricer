@@ -178,6 +178,8 @@ exec --nostartup-id "/usr/bin/lxqt-policykit-agent"
 # lock screen
 bindsym $mod+BackSpace exec "swaylock -efc 000000"
 bindsym $mod+i exec "emoji"
+bindsym $mod+m exec "dmount"
+bindsym $mod+Shift+m exec "dumount"
 
 bindsym $mod+p exec plumb
 bindsym Print exec "grim"

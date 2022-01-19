@@ -3,6 +3,8 @@
 .local/bin/dmount scripts/dmount.sh
 .local/bin/mounter scripts/mounter.sh
 .local/bin/prompt scripts/prompt.sh
+.local/bin/dumount scripts/dumount.sh
+.local/bin/umounter scripts/umounter.sh
 .local/bin/xplumb scripts/xplumb.sh
 .local/share/emojilist data/emojilist.txt
 .local/bin/plumb scripts/plumb.sh

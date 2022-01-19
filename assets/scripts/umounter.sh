@@ -1,0 +1,2 @@
+sudo umount "$CHOSEN"
+

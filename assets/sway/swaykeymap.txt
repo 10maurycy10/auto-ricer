@@ -64,3 +64,8 @@ SysRq : take screenshot
 
 mod4-i : open emoji picker (suckless)
 
+mod4-p : open dialog to do things with selected text.
+
+mod4-m : mount removable drives dialog
+
+mod4-shift-m : unmount removable drives dialog
