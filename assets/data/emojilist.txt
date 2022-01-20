@@ -1591,3 +1591,39 @@
 🏴󠁧󠁢󠁥󠁮󠁧󠁿 flag: England; 1F3F4725E7F;
 🏴󠁧󠁢󠁳󠁣󠁴󠁿 flag: Scotland; 1F3F472334F;
 🏴󠁧󠁢󠁷󠁬󠁳󠁿 flag: Wales; 1F3F4727C3F;
+± math: +- PLUS MINUS
+√ math: SQUARE ROOT
+∛ math: QUBE ROOT
+∜ math: FOURTH ROOT
+∝ math: ≮≯≰≱≈≉≮≯
+∞ math: infinity
+≠ math: not equal to
+≤ math: less than or equal
+≥ math: more than or equal
+≮ math: not less than
+≯ math: not more than
+≪ math: much less than
+≫ math: much more than
+∫ math: integral
+∬ math: double integral
+∭ math: triple integral
+⨌ math: quadruple integral
+≈ math: aproximatly equal to
+≉ math: not aproximatly equal to
+⅐ math: one seventh
+⅑ math: one ninth
+⅒ math: one tenth
+⅓ math: one third
+⅔ math: two thirds
+⅕ math: one fifth
+⅖ math: two fifths
+⅗ math: three fifths
+⅘ math: four fifths
+⅙ math: one sixth
+⅚ math: five sixths
+⅛ math: one eighth 
+⅜ math: three eights
+⅝ math: five eights
+⅞ math: seven eights
+⅟ math: one demominatior
+⁄ math: fraction slash
