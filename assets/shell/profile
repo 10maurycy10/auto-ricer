@@ -6,6 +6,7 @@ export TERMINAL=st
 export LD_LIBRARY_PATH="$HOME/.local/lib:/lib:/usr/lib:/usr/local/lib"
 export SHELL="/usr/bin/zsh"
 export BROWSER="firefox"
+export GRIM_DEFAULT_DIR="Pictures"
 
 export GOPATH="$HOME/.local/share/go"
 export GOROOT="/usr/lib/go"
