@@ -24,3 +24,4 @@
 .local/share/i3doc i3/i3keymap.txt
 .local/bin/swayhelp scripts/swayhelp
 .local/bin/i3help scripts/i3help
+.local/bin/mailbday scripts/bday.sh
