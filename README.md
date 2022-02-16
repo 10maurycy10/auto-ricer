@@ -1,6 +1,6 @@
 # Auto Ricer
 
-## Usage:
+## Usage (downloading requires a network connection): 
 
 Add a user, su.:
 
@@ -11,9 +11,7 @@ useradd demo
 su demo
 ```
 
-Connect to a network.
-
-Run
+Run, It will prompt for your root password.
 
 ```
 curl https://raw.githubusercontent.com/10maurycy10/auto-ricer/main/bootstrap.sh | bash
