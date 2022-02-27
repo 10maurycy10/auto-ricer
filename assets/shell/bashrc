@@ -2,3 +2,5 @@
 
 # disable ^S ^Q
 stty -ixon
+
+export PATH="$HOME/.local/bin/:$HOME/.local/usr/local/bin/:/usr/local/bin:/bin:/usr/bin:$GOBIN"
