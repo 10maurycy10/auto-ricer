@@ -220,4 +220,6 @@ bindsym $mod+q exec "st i3help"
 
 bindsym $mod+m exec "dmount"
 
+exec dunst
+
 bindsym $mod+Shift+m exec "dumount"
