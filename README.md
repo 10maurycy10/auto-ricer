@@ -1,6 +1,6 @@
 # Auto Ricer
 
-## Usage (downloading requires a network connection): 
+## Usage (downloading requires a network connection, but installing from a cloned repo can be done offline): 
 
 Add a user, su.:
 
