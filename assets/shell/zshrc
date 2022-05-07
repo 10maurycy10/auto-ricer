@@ -68,4 +68,4 @@ export SAVEHIST=1000000000
 export HISTSIZE=1000000000
 
 
-export PATH="$HOME/.local/bin/:$HOME/.local/usr/local/bin/:/usr/local/bin:/bin:/usr/bin:$GOBIN"
+export PATH="/home/mz/soft/zig/build:$HOME/.local/bin/:$HOME/.local/usr/local/bin/:/usr/local/bin:/bin:/usr/bin:$GOBIN"

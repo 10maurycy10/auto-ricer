@@ -7,11 +7,15 @@ export LD_LIBRARY_PATH="$HOME/.local/lib:/lib:/usr/lib:/usr/local/lib"
 export SHELL="/usr/bin/zsh"
 export BROWSER="firefox"
 export GRIM_DEFAULT_DIR="Pictures"
+export ALT=${USER}2
 export MAKEFLAGS="-j$(nproc)"
+export XMODIFIERS=@im=ibus
 
 export GOPATH="$HOME/.local/share/go"
 export GOROOT="/usr/lib/go"
 export GOBIN="$GOPATH/bin"
+
+
 
 export PATH="$HOME/.local/bin/:$HOME/.local/usr/local/bin/:/usr/local/bin:/bin:/usr/bin:$GOBIN"
 
@@ -21,3 +25,4 @@ stty -ixon
 export HISTTIMEFORMAT="[%F %T] "
 
 
+[[ -z $DISPLAY ]] && [[ "$(tty)" == "/dev/tty1" ]] && exec sway --unsupported-gpu

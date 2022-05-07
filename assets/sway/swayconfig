@@ -187,7 +187,10 @@ bindsym Print exec "grim"
 output * bg #111111 solid_color adaptive_sync on
 
 exec wl-paste -t text --watch clipman store --no-persist
+exec --nostartup-id ibus-daemon -drxR
 
 exec dunst
-
+exec "xhost +local:"
 bindsym $mod+q exec "st swayhelp"
+
+gaps inner 10
