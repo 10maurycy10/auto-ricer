@@ -1,1 +1,1 @@
-networkmanager noto-fonts ttf-hack make gcc ttf-dejavu pango zsh-syntax-highlighting automake patch autoconf pkg-config xorg-util-macros zsh-autosuggestions fcron dunst
+networkmanager noto-fonts ttf-fira-code ttf-hack make gcc ttf-dejavu pango zsh-syntax-highlighting automake patch autoconf pkg-config xorg-util-macros zsh-autosuggestions fcron dunst
