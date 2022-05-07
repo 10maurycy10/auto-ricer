@@ -26,3 +26,5 @@
 .local/bin/swayhelp scripts/swayhelp
 .local/bin/i3help scripts/i3help
 .local/bin/mailbday scripts/bday.sh
+.local/bin/safe scripts/safe.sh
+.local/bin/safefox scripts/safefox
