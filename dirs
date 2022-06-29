@@ -6,3 +6,4 @@
 .config/i3
 .config/i3status
 .config/fontconfig
+.config/dunst

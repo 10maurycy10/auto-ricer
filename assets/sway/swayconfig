@@ -10,15 +10,19 @@ client.background        #111111
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-#font pango:monospace 8
+font pango:monospace 18
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 8
+font pango:DejaVu Sans Mono 16
 
 bindsym $mod+XF86AudioMute exec amixer sset 'Master' toggle
 bindsym $mod+XF86AudioLowerVolume exec amixer sset 'Master' 5%-
 bindsym $mod+XF86AudioRaiseVolume exec amixer sset 'Master' 5%+
+
+bindsym $mod+F1 exec amixer sset 'Master' toggle
+bindsym $mod+F2 exec amixer sset 'Master' 5%-
+bindsym $mod+F3 exec amixer sset 'Master' 5%+
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -136,16 +140,16 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym j resize shrink width 20 px or 10 ppt
+        bindsym k resize grow height 20 px or 10 ppt
+        bindsym l resize shrink height 20 px or 10 ppt
+        bindsym semicolon resize grow width 20 px or 10 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 20 px or 10 ppt
+        bindsym Down resize grow height 20 px or 10 ppt
+        bindsym Up resize shrink height 20 px or 10 ppt
+        bindsym Right resize grow width 20 px or 10 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -185,11 +189,12 @@ bindsym $mod+p exec plumb
 bindsym Print exec "grim"
 
 output * bg #111111 solid_color adaptive_sync on
+output * scale 1
 
 exec wl-paste -t text --watch clipman store --no-persist
 exec --nostartup-id ibus-daemon -drxR
 
-exec dunst
+exec --nostartup-id dunst
 exec "xhost +local:"
 bindsym $mod+q exec "st swayhelp"
 

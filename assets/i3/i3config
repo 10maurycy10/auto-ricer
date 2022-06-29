@@ -43,6 +43,12 @@ bindsym $mod+XF86AudioMute "exec amixer sset 'Master' toggle"
 bindsym $mod+XF86AudioLowerVolume "exec amixer sset 'Master' 5%-"
 bindsym $mod+XF86AudioRaiseVolume "exec amixer sset 'Master' 5%+"
 
+bindsym $mod+XF86AudioMute exec amixer set Master toggle
+bindsym $mod+XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym $mod+XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+
+
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -220,6 +226,6 @@ bindsym $mod+q exec "st i3help"
 
 bindsym $mod+m exec "dmount"
 
-exec dunst
+exec --no-startup-id dunst
 
 bindsym $mod+Shift+m exec "dumount"

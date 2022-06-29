@@ -28,3 +28,6 @@
 .local/bin/mailbday scripts/bday.sh
 .local/bin/safe scripts/safe.sh
 .local/bin/safefox scripts/safefox
+.local/bin/testinternet scripts/testinternet.sh
+.config/chromium-flags.conf chromeflags
+.config/dunst/dunstrc dunstrc

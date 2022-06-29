@@ -1,4 +1,2 @@
 #!/bin/bash
-export DISPLAY=':0'
-export $(dbus-launch)
-/usr/bin/notify-send "$1"
+XDG_RUNTIME_DIR=/run/user/$(id -u) notify-send '$1'
