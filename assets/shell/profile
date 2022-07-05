@@ -10,10 +10,12 @@ export GRIM_DEFAULT_DIR="Pictures"
 export ALT=${USER}2
 export MAKEFLAGS="-j$(nproc)"
 export XMODIFIERS=@im=ibus
+
+#export QT_AUTO_SCREEN_SCALE_FACTOR=1
+export QT_SCALE_FACTOR=2
 export GDK_SCALE=2
 export GDK_DPI_SCALE=2
-export QT_AUTO_SCREEN_SCALE_FACTOR=1
-export QT_FONT_DPI=200
+
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 export GOPATH="$HOME/.local/share/go"
